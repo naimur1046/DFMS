@@ -1,0 +1,33 @@
+﻿@model List<DFMS.Models.Entity.CalfDetails>
+
+<h2>Calf Details</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Calf ID</th>
+            <th>Mother ID</th>
+            <th>Father ID</th>
+            <th>Birth Date</th>
+            <th>Health Status</th>
+            <th>Weight at Birth</th>
+            <th>Vaccination Status</th>
+            <th>House No</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var calf in Model)
+        {
+            <tr>
+                <td>@calf.CalfID</td>
+                <td>@calf.CalfMotherID</td>
+                <td>@calf.CalfFatherID</td>
+                <td>@calf.CalfBirthDate.ToShortDateString()</td>
+                <td>@calf.CalfHealthStatus</td>
+                <td>@calf.CalfWeightAtBirth</td>
+                <td>@calf.CalfVaccinationStatus</td>
+                <td>@calf.CalfHouseNo</td>
+            </tr>
+        }
+    </tbody>
+</table>
